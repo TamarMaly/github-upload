@@ -12,7 +12,7 @@ import utils.Utils;
 public class EndToEndTest extends BaseTest {
 
 	@Test
-	public void tc31_E2EBuyFromProductsPage() {
+	public void tc35_E2EBuyFromProductsPage() {
 		HomePage hp = new HomePage(driver);
 		hp.searchProductsPage("apple");
 
@@ -29,7 +29,7 @@ public class EndToEndTest extends BaseTest {
 	}
 
 	@Test
-	public void tc32_E2EChangeSettings() {
+	public void tc36_E2EChangeSettings() {
 		HomePage hp = new HomePage(driver);
 		hp.login();
 
