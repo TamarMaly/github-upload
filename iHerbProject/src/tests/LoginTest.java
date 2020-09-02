@@ -14,7 +14,8 @@ public class LoginTest extends BaseTest {
 	protected String validPhone = Utils.readProperty("phone");
 	protected String validPassword = Utils.readProperty("password");
 
-	//
+	// Successful user login
+	// If the user enters valid user and password info then he'll login the website
 //	@Test
 	public void tc01_successfulUserLogin() {
 		LoginPage lp = new LoginPage(driver);
@@ -27,7 +28,8 @@ public class LoginTest extends BaseTest {
 		hp.logout();
 	}
 
-	//
+	// Invalid user login - uses data provider
+	// If the user enters invalid user info then he won't login the website
 	@Test(dataProvider = "getData", description = "In this test I used dataProvider which means the test method will run multiple times with different data sets - login should fail")
 	public void tc02_invalidUserLogin(String email, String password) {
 		LoginPage lp = new LoginPage(driver);
@@ -48,7 +50,8 @@ public class LoginTest extends BaseTest {
 		return myData;
 	}
 
-	//
+	// Empty user login
+	// If the user enters only password he won't login the website
 //	@Test
 	public void tc03_emptyUserLogin() {
 		LoginPage lp = new LoginPage(driver);
@@ -60,7 +63,9 @@ public class LoginTest extends BaseTest {
 		lp.backToHomePage();
 	}
 
-	//
+	// Invalid password login
+	// If the user enters valid user and invalid password info then he won't login
+	// the website
 //	@Test
 	public void tc04_invalidPasswordLogin() {
 		LoginPage lp = new LoginPage(driver);
@@ -72,7 +77,9 @@ public class LoginTest extends BaseTest {
 		lp.backToHomePage();
 	}
 
-	//
+	// Invalid user info login
+	// If the user enters invalid user and password info then he won't login the
+	// website
 //	@Test
 	public void tc05_invalidUserInfoLogin() {
 		LoginPage lp = new LoginPage(driver);
@@ -84,7 +91,8 @@ public class LoginTest extends BaseTest {
 		lp.backToHomePage();
 	}
 
-	//
+	// Empty user invalid password login
+	// If the user enters only invalid password he won't login the website
 //	@Test
 	public void tc06_emptyUserInvalidPasswordLogin() {
 		LoginPage lp = new LoginPage(driver);
@@ -96,7 +104,8 @@ public class LoginTest extends BaseTest {
 		lp.backToHomePage();
 	}
 
-	//
+	// No password login
+	// If the user enters only user info then he won't login the website
 //	@Test
 	public void tc07_noPasswordLogin() {
 		LoginPage lp = new LoginPage(driver);
@@ -108,7 +117,8 @@ public class LoginTest extends BaseTest {
 		lp.backToHomePage();
 	}
 
-	//
+	// Empty password invalid user login
+	// If the user enters only invalid user he won't login the website
 //	@Test
 	public void tc08_emptyPasswordInvalidUserLogin() {
 		LoginPage lp = new LoginPage(driver);
@@ -120,7 +130,8 @@ public class LoginTest extends BaseTest {
 		lp.backToHomePage();
 	}
 
-	//
+	// No info login
+	// If the user doesn't enter any info then he won't login the website
 //	@Test
 	public void tc09_noInfoLogin() {
 		LoginPage lp = new LoginPage(driver);
@@ -134,7 +145,8 @@ public class LoginTest extends BaseTest {
 		lp.backToHomePage();
 	}
 
-	//
+	// Successful phone login
+	// If the user enters invalid user login info then he won't login the website
 //	@Test
 	public void tc10_successfulPhoneLogin() {
 		LoginPage lp = new LoginPage(driver);
@@ -147,7 +159,8 @@ public class LoginTest extends BaseTest {
 		hp.logout();
 	}
 
-	//
+	// Invalid password with phone login
+	// If the user enters invalid user login info then he won't login the website
 //	@Test
 	public void tc11_invalidPasswordWithPhoneLogin() {
 		LoginPage lp = new LoginPage(driver);
@@ -159,7 +172,8 @@ public class LoginTest extends BaseTest {
 		lp.backToHomePage();
 	}
 
-	//
+	// Invalid phone login
+	// If the user enters invalid user login info then he won't login the website
 //	@Test
 	public void tc12_invalidPhoneLogin() {
 		LoginPage lp = new LoginPage(driver);
@@ -171,7 +185,9 @@ public class LoginTest extends BaseTest {
 		lp.backToHomePage();
 	}
 
-	//
+	// Invalid phone info login
+	// If the user enters invalid password login info then he won't login to the
+	// website
 //	@Test
 	public void tc13_invalidPhoneInfoLogin() {
 		LoginPage lp = new LoginPage(driver);
@@ -183,7 +199,9 @@ public class LoginTest extends BaseTest {
 		lp.backToHomePage();
 	}
 
-	//
+	// Logout
+	// If the user chooses to logout he will logout the website and returns to the
+	// website's homepage
 //	@Test
 	public void tc14_logout() {
 		HomePage hp = new HomePage(driver);

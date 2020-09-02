@@ -9,7 +9,10 @@ import pageobjects.ProductsPage;
 
 public class SearchTest extends BaseTest {
 
-//	@Test
+	// Search in drop down menu
+	// If the user searches for an existing item in search then a list of all
+	// relevant items will appear in the drop down under search
+	@Test
 	public void tc27_searchDropDownMenu() {
 		HomePage hp = new HomePage(driver);
 		hp.searchDropDownMenu("apple");
@@ -18,7 +21,9 @@ public class SearchTest extends BaseTest {
 		assertEquals(actual, true);
 	}
 
-//	@Test
+	// Empty search
+	// If the user searches for empty search then nothing will happen
+	@Test
 	public void tc28_emptySearch() {
 		HomePage hp = new HomePage(driver);
 		hp.searchProductsPage("");
@@ -27,7 +32,10 @@ public class SearchTest extends BaseTest {
 		assertEquals(actual, "https://il.iherb.com/");
 	}
 
-//	@Test
+	// Non existing search
+	// If the user searches for non existing item in search then a message will
+	// appear
+	@Test
 	public void tc29_nonExistingSearch() {
 		HomePage hp = new HomePage(driver);
 		hp.searchProductsPage("dkjnvKJ");
@@ -38,6 +46,9 @@ public class SearchTest extends BaseTest {
 		assertEquals(actual, true);
 	}
 
+	// Search in products page
+	// If the user searches for an existing item in search then a list of all
+	// relevant items will appear
 	@Test
 	public void tc30_searchInProductsPage() {
 		HomePage hp = new HomePage(driver);

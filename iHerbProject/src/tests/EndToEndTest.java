@@ -11,6 +11,10 @@ import utils.Utils;
 
 public class EndToEndTest extends BaseTest {
 
+	// E2E - Login,Search,Add to cart,Logout
+	// If the user logins and searchs an item and than adds items to his cart and
+	// logout than the website will comply and the user's cart will contain the
+	// products
 	@Test
 	public void tc35_E2EBuyFromProductsPage() {
 		HomePage hp = new HomePage(driver);
@@ -28,6 +32,9 @@ public class EndToEndTest extends BaseTest {
 		AssertJUnit.assertEquals(actual, true);
 	}
 
+	// E2E - Change Settings
+	// If the user logins and add an address and deletes it and edits his email and
+	// searchs for an apple and logs out
 	@Test
 	public void tc36_E2EChangeSettings() {
 		HomePage hp = new HomePage(driver);
