@@ -23,7 +23,7 @@ public class CartPage extends BasePage {
 	}
 
 	// Remove items from the cart
-
+	// TC33 TC32 TC33
 	public void removeItemFromCart(String itemNumber) {
 		WebElement removeItemTag = driver
 				.findElement(By.cssSelector("[data-qa-element='btn-item-remove-" + itemNumber + "']"));
@@ -32,7 +32,7 @@ public class CartPage extends BasePage {
 	}
 
 	// Calculate total of the cart
-
+	// TC34
 	public double calculateItemsInCart() {
 		List<WebElement> allPrices = driver.findElements(By.cssSelector(".rtl-17rm9tq"));
 		double sum = 0;
@@ -45,11 +45,13 @@ public class CartPage extends BasePage {
 		return sum;
 	}
 
+	// TC34
 	public double cartTotal() {
 		String total = sum.getText().substring(1);
 		return Double.parseDouble(total);
 	}
 
+	// TC33
 	public boolean isCartEmpty() {
 		click(cartTag);
 		sleep(500);

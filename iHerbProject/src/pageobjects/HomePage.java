@@ -135,6 +135,7 @@ public class HomePage extends BasePage {
 		return getText(loggedInEmail);
 	}
 
+	// TC14
 	public boolean isLogout() {
 		return (loginTag.isDisplayed());
 	}

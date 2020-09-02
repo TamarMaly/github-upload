@@ -45,12 +45,6 @@ public class AccountSettingsPage extends BasePage {
 		super(driver);
 	}
 
-	//
-	public void enterAccountSettingsPage() {
-		HomePage hp = new HomePage(driver);
-		hp.moveToAccountSettingsPage();
-	}
-
 	// TC15 TC16
 	public void editAccountNameInfo(String name) {
 		click(editAccoutNameTag);
@@ -93,6 +87,12 @@ public class AccountSettingsPage extends BasePage {
 			click(submitTag);
 			sleep(500);
 		}
+	}
+
+	// Move to other pages
+	public void enterAccountSettingsPage() {
+		HomePage hp = new HomePage(driver);
+		hp.moveToAccountSettingsPage();
 	}
 
 	public void backToHomePage() {

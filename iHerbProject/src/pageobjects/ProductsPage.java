@@ -89,6 +89,7 @@ public class ProductsPage extends BasePage {
 
 	// Asserts methods
 
+	// TC31 TC32
 	public boolean isInCart() {
 		if (closePopupTag.isDisplayed()) {
 			return true;
@@ -97,6 +98,7 @@ public class ProductsPage extends BasePage {
 		}
 	}
 
+	// TC31 TC32 TC33
 	public void removeItemFromCart(String itemNumber) {
 		moveToCart();
 

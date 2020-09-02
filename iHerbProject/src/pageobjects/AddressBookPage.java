@@ -51,6 +51,7 @@ public class AddressBookPage extends BasePage {
 		hp.moveToAddressBookPage();
 	}
 
+	// Used in method addNewValidAddress
 	public void addNewAddress(String name, String address, String city, String country, String pc, String phone) {
 		click(addNewAddressTag);
 		sleep(500);
@@ -64,12 +65,14 @@ public class AddressBookPage extends BasePage {
 		sleep(1500);
 	}
 
+	// TC22 TC23 TC24
 	public void deleteAddress() {
 		sleep(500);
 		click(deleteAddressTag);
 		sleep(1500);
 	}
 
+	// TC22 TC23 TC25
 	public void addNewValidAddress(String name, String address, String city, String country, String pc, String phone) {
 		enterAddressBookPage();
 		addNewAddress(name, address, city, country, pc, phone);
